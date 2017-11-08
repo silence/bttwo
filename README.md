@@ -1,5 +1,5 @@
 # bttwo
-爬虫练手
+爬虫练习
 
 TODO LIST
 - 将文件名存入mongodb中
