@@ -36,6 +36,7 @@ class bttwo():
                     print(u'获取', movie_url, u'出错,已跳过')
                     continue
                 title = title.replace(':', '：')
+                title = title.replace('?','？')
                 print(u'开始保存', title)
                 path = 'C:\\Users\\60114\\Desktop\\bttwo'
                 # os.mkdir(os.path.join(path,title))
