@@ -44,24 +44,24 @@ class download():
                 return requests.get(url, headers=headers, timeout=timeout)
             except Exception as e:
                 print(e)
-                print(u'开始使用代理')
+                print('Starting to use porxies')
                 # time.sleep(1)
                 IP = random.choice(self.iplist)
                 proxy = {'http': IP}
                 return self.get(url, proxy)
         else:
             try:
-                print(u'当前代理是', proxy)
+                print('The current agent is', proxy)
                 return requests.get(url, headers=headers, proxies=proxy, timeout=timeout)
             except:
                 if num_retries > 0:
                     # time.sleep(1)
                     IP = random.choice(self.iplist)
                     proxy = {'http': IP}
-                    print(u'正在更换代理,获取第倒数第', num_retries, u'次')
+                    print('Starting to change agent, try the last', num_retries)
                     return self.get(url, proxy, num_retries - 1)
                 else:
-                    print(u'估计是其他原因不能下载')
+                    print('There are other reasons not to Download')
 
 
 download = download()
