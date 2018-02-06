@@ -76,6 +76,12 @@ class bttwo():
                         print(e)
                         print("Error: couldn't save", name)
                         continue
+                try:
+                    os.rmdir('%s/%s' % (path,title))
+                except OSError as e:
+                    print(e)
+                    continue
+
 
     def chdir(self, path, title):
         isExists = os.path.exists(os.path.join(path, title))
