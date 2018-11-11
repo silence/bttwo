@@ -1,9 +1,9 @@
 # bttwo
 ![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)
 
-使用python3爬取[bttwo](http://www.bttwo.com)全站bt文件
+使用python3爬取[bttwo](http://www.bttwo.com)全站bt文件,并利用`mongodb`来存储二进制文件和去重
 ## Usage
-使用之前请安装lxml,requests,BeautifulSoup
+使用之前请安装`lxml`,`requests`,`BeautifulSoup`以及`mongodb`
 ```
 pip3 install lxml requests beautifulsoup4
 ```
